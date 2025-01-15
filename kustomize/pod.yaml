@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myapp
+  labels:
+    name: myapp
+spec:
+  volumes:
+  - name: config
+    configMap:
+      name: configmap-1
+  containers:
+  - name: myapp
+    image: busybox
+    command: ["/bin/sh", "sleep", "3600"]
+    volumeMounts:
+      - name: config
+        mountPath: /config
+    resources:
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+    
