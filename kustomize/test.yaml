@@ -1,6 +1,7 @@
 apiVersion: kusttomize.config.k8s.io/v1beta1
 kind: Kustomization
-name: test
+metadata:
+  namespace: test
 configMapGenerator:
 - name: configmap-1
   files:
