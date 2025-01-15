@@ -11,8 +11,7 @@ spec:
       name: configmap-1
   containers:
   - name: myapp
-    image: alpine:3.12
-    command: ["sleep", "3600"]
+    image: nginx
     volumeMounts:
       - name: config
         mountPath: /config
