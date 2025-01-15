@@ -12,6 +12,7 @@ spec:
   containers:
   - name: myapp
     image: alpine:3.12
+    command: ["sleep", "3600"]
     volumeMounts:
       - name: config
         mountPath: /config
