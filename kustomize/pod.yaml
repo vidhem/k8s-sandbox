@@ -11,7 +11,7 @@ spec:
       name: configmap-1
   containers:
   - name: myapp
-    image: busybox
+    image: alpine:3.12
     command: ["/bin/sh", "sleep", "3600"]
     volumeMounts:
       - name: config
