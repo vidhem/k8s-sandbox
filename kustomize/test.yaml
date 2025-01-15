@@ -1,0 +1,6 @@
+apiVersion: kusttomize.config.k8s.io/v1beta1
+kind: Kustomization
+configMapGenerator:
+- name: configmap-1
+  files:
+  - test.tar.gz
